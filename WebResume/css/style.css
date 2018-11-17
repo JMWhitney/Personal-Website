@@ -1,5 +1,9 @@
 html{
     background-color: black;
+    box-sizing: border-box;
+} 
+*, *:before, *:after{
+    box-sizing: inherit;
 }
 
 body {
@@ -31,7 +35,7 @@ nav li {
 }
 
 nav li a{
-    display:inline-block;
+    display: block;
     color:white;
     font-size: 1.5em;
     text-align:center;
@@ -39,7 +43,7 @@ nav li a{
     text-decoration: none;
 }
 
-li a:hover{
+nav li a:hover{
     background-color: #555;
     -webkit-transform: translateY(5px);
     transform: translateY(5px);
@@ -80,14 +84,28 @@ main {
 
 #main-image{
     float: left;
-    width: 400px;
+    width: 600px;
     height: 600px;
 }
 
-#about-me{
-float: right;
+img {
+    width: inherit;
+    height: inherit;
 }
 
+#about-me{
+    float: right;
+    height: 100%;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: #662211;
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
 
 /* .background-image {
     background-image: url("../images/home_background.jpeg");
