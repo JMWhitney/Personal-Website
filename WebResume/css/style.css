@@ -1,3 +1,99 @@
+/* MOBILE STYLING */
+html{
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+} 
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+}
+
+.content {
+
+}
+
+.fa-bars {
+    color: white;
+    margin: 5px;
+}
+
+.hide {
+    display: none;
+}
+
+nav {
+    display: grid;
+
+}
+
+nav ul {
+    grid-template-columns: auto auto auto;
+    list-style-type: none;
+    margin-bottom: 0;
+    padding :0px;
+    overflow: hidden;
+    background-color: #111;
+}
+
+nav li {
+
+}
+
+nav li a{
+    color: white;
+    text-align: center;
+    padding: 32px;
+    text-decoration: none;
+}
+
+a {
+    color: white;
+}
+
+header, footer{
+    color: white;
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
+}
+
+main {
+
+}
+
+#main-image {
+    display: block;
+    height: 40vw;
+    width: 40vw;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 5px;
+}
+
+
+#about-me {
+    max-width: 70%;
+    margin: auto;
+}
+
+.btn{
+    text-decoration: none;
+    background-color: #662211;
+    padding: 5px;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+/* DESKTOP STYLING */
+
 @media(min-width: 640px) {
     html{
         box-sizing: border-box;
@@ -10,10 +106,15 @@
     }
 
     body {
-
+        margin: 0;
     }
 
     .content {
+
+    }
+
+    .fa-bars {
+        display: none;
     }
 
     nav {
@@ -22,14 +123,14 @@
 
     nav ul {
         list-style-type: none;
-        margin-bottom: 20px;
+        margin: 0;
         padding :0px;
         overflow: hidden;
         background-color: #111;
     }
 
     nav li {
-        margin: auto;
+        margin: 0;
         float: left;
     }
 
@@ -39,6 +140,7 @@
         font-size: 2vw;
         text-align: center;
         padding: 32px;
+        margin: 0;
         text-decoration: none;
     }
 
@@ -55,11 +157,10 @@
 
     header, footer{
         display: block;
-        margin: auto;
-        width: 90%;
+        width: 100vw;
         color: whitesmoke;
         padding: 10px;
-        margin: 20px;
+        margin: 0;
         text-align: center;
         background-color: #333;
     }
@@ -83,10 +184,7 @@
 
 
     #about-me {
-        max-width: 700px;
-        
-
-        
+        max-width: 700px;    
     }
 
     .btn{
@@ -99,77 +197,6 @@
     }
 
 } 
-
-html{
-
-} 
-
-*, *:before, *:after{
-
-}
-
-body {
-
-}
-
-.content {
-
-}
-
-nav {
-    display: grid;
-
-}
-
-nav ul {
-    grid-template-columns: auto auto auto;
-    list-style-type: none;
-    margin-bottom: 20px;
-    padding :0px;
-    overflow: hidden;
-    background-color: #111;
-}
-
-nav li {
-
-}
-
-nav li a{
-    color: white;
-    font-size: 2vw;
-    text-align: center;
-    padding: 32px;
-    text-decoration: none;
-}
-
-a {
-    color: white;
-}
-
-header, footer{
-
-}
-
-main {
-
-}
-
-#main-image {
-}
-
-
-#about-me {
-    max-width: 100%;
-}
-
-.btn{
-    text-decoration: none;
-    background-color: #662211;
-    padding: 5px;
-    border-style: solid;
-    border-width: 3px;
-    border-radius: 10px;
-}
 
 
 
