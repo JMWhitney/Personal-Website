@@ -3,15 +3,27 @@
 html{
     box-sizing: border-box;
     font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     margin: 0;
+    overflow-x: hidden;
 } 
 body {
     margin: 0;
 }
 /* HEADER */
-header h1, header h2 {
+header h1 {
     font-size: calc(36px + 10 * ((100vw - 320px) / 680));
+    font-family: 'Archivo Black', sans-serif;
+    letter-spacing: .1em;
+    color: white;
+    position: relative;
+    margin: 0;
+    margin-bottom: 20px;
+    padding: 0;
+}
+
+header h2 {
+  font-size: calc(16px + 8 * ((100vw - 320px) / 680));
     font-family: 'Archivo Black', sans-serif;
     letter-spacing: .1em;
     color: white;
@@ -42,11 +54,11 @@ header h1, header h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    transform: skewY(-50deg);
+    transform: skewY(-40deg);
     transform-origin: top left;
-    background-image: linear-gradient(rgba(0, 42, 121, 1.0), rgba(0, 42, 121, 0.9));
+    background-image: linear-gradient(rgba(0, 42, 121, 1.0), rgb(34, 86, 121));
     /* border-bottom: 8px solid rgba(255, 102, 0, 0.75); */
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid lightgrey;
 }
 
 header{
@@ -67,8 +79,28 @@ header{
     background-repeat: no-repeat;
     /* background-attachment: fixed; */
     /* border-bottom: 8px solid rgba(255, 102, 0, 0.75) */
-    border-bottom: 10px solid black;
+    border-bottom: 10px solid lightgrey;
     
+}
+
+/* Style buttons */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
 }
 
 /* BLINKING CURSOR */
@@ -84,7 +116,7 @@ header{
     animation: 1s blink step-end infinite;
   }
   
-  @keyframes "blink" {
+  @keyframes blink {
     from, to {
       color: transparent;
       text-shadow: 0px 0px #FFFFFF00;
@@ -106,7 +138,7 @@ header{
     }
   }
   
-  @-webkit-keyframes "blink" {
+  @-webkit-keyframes blink {
     from, to {
       color: transparent;
       text-shadow: 0px 0px #FFFFFF00;
@@ -117,7 +149,7 @@ header{
     }
   }
   
-  @-ms-keyframes "blink" {
+  @-ms-keyframes blink {
     from, to {
       color: transparent;
       text-shadow: 0px 0px #FFFFFF00;
@@ -128,7 +160,7 @@ header{
     }
   }
   
-  @-o-keyframes "blink" {
+  @-o-keyframes blink {
     from, to {
       color: transparent;
       text-shadow: 2px 2px #FFFFFF00;
@@ -147,10 +179,192 @@ header{
 /* MAIN CONTENT */
 #main {
     min-height: 100vh;
+    padding: 20px;
     background-color: rgba(0, 42, 121, 0.1);
-    filter: drop-shadow(0px 15px 5px #333);
+    filter: drop-shadow(0px 5px 5px #AAA);
 }
+
+@media only screen and (max-width: 700px) {
+  #main {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* ABOUT ME */
+#about {
+  display: flex;
+  flex-direction: row;
+  min-height: 25vh;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#about h2 {
+  padding: 50px;
+  border-right: 2px solid lightgrey;
+}
+
+#about p {
+  padding: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  #about {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #about h2 {
+    border-right: 0;
+    border-bottom: 2px solid lightgrey;
+  }
+}
+/* END ABOUT ME */
+
+/* SKILLS */
+#qualifications {
+  display: flex;
+  flex-direction: row;
+  min-height: 25vh;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#qualifications div {
+  width: 100%;
+  padding: 20px;
+  border-left: 2px solid lightgrey;
+  border-right: 2px solid lightgrey;
+}
+
+@media only screen and (max-width: 900px) {
+  #qualifications {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #qualifications h2 {
+    border-right: 0;
+    border-bottom: 2px solid lightgrey;
+  }
+}
+
+/* END SKILLS */
+
+/* PORTFOLIO */
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  min-height: 25vh;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.portfolio-item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 5px solid lightgrey;
+}
+
+.portfolio-item:hover {
+  background-color: rgba(0, 42, 121, 0.1);
+}
+
+.portfolio-item img {
+  max-width: 300px;
+  height: 300px;
+  border: 5px solid grey;
+  flex: 1;
+}
+
+.portfolio-item p {
+  padding: 20px;
+  flex: 4;
+}
+
+@media only screen and (max-width: 900px) {
+  #portfolio {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .portfolio-item {
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .portfolio-item img {
+
+  }
+}
+
+/* END PORTFOLIO */
+
+/* CONTACT */
+/* END CONTACT */
+
 /* END MAIN CONTENT */
+
+/* FOOTER */
+footer {
+  background-color: #282c34;
+  min-height: 50px;
+  min-width: 100vw;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* ICONS */
+.icon-container {
+  display: flex;
+  justify-content: center;
+}
+a[class^="fa"] {
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 25%;
+  font-size: 25px;
+}
+
+a[class^="fa"]:hover {
+    opacity: 0.7;
+}
+
+.fa-linkedin {
+  background-color: #007bb5;
+  color: white;
+}
+
+.fa-github {
+  background-color: #111;
+  color: white; 
+}
+
+.fa-envelope {
+  background-color: coral;
+  color: white;
+}
+
+.fa-address-card {
+  background-color: burlywood;
+  color: #111;
+}
+/* END ICONS */
+/* END FOOTER */
 
    
 
