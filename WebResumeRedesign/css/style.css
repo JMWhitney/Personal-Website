@@ -204,6 +204,9 @@ header{
 #about h2 {
   padding: 50px;
   border-right: 2px solid lightgrey;
+  background-color: rgb(34, 86, 121);
+  color: white;
+  margin-left: 20px;
 }
 
 #about p {
@@ -239,6 +242,13 @@ header{
   padding: 20px;
   border-left: 2px solid lightgrey;
   border-right: 2px solid lightgrey;
+}
+
+#qualifications h2 {
+  background-color: rgb(34, 86, 121);
+  color: white;
+  margin: 0;
+  padding: 20px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -365,6 +375,3 @@ a[class^="fa"]:hover {
 }
 /* END ICONS */
 /* END FOOTER */
-
-   
-
