@@ -12,7 +12,7 @@ body {
 }
 /* HEADER */
 header h1 {
-    font-size: calc(36px + 10 * ((100vw - 320px) / 680));
+    font-size: calc(42px + 10 * ((100vw - 320px) / 680));
     font-family: 'Archivo Black', sans-serif;
     letter-spacing: .1em;
     color: white;
@@ -41,12 +41,12 @@ header h2 {
 }
 @media only screen and (max-width: 900px) {
     #title {
-        margin: 0;
-        margin-top: 225px;
+        /* margin: 0;
+        margin-top: 225px; */
     }
 }
 
-.title-bg {
+#title-bg {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -57,7 +57,6 @@ header h2 {
     transform: skewY(-40deg);
     transform-origin: top left;
     background-image: linear-gradient(rgba(0, 42, 121, 1.0), rgb(34, 86, 121));
-    /* border-bottom: 8px solid rgba(255, 102, 0, 0.75); */
     border-bottom: 10px solid lightgrey;
 }
 
@@ -83,6 +82,11 @@ header{
     
 }
 
+#download-container {
+  display: flex;
+  flex-direction: column;
+}
+
 /* Style buttons */
 .btn {
   background-color: DodgerBlue;
@@ -92,10 +96,11 @@ header{
   cursor: pointer;
   font-size: 20px;
   position: relative;
-  margin-top: 20px;
-  margin-bottom: 20px;
   text-decoration: none;
   white-space: nowrap;
+  margin: auto;
+  margin-bottom: 5px;
+  width: 200px;
 }
 
 /* Darker background on mouse-over */
@@ -202,8 +207,7 @@ header{
 }
 
 #about h2 {
-  padding: 50px;
-  border-right: 2px solid lightgrey;
+  padding: 30px;
   background-color: rgb(34, 86, 121);
   color: white;
   margin-left: 20px;
@@ -222,7 +226,7 @@ header{
 
   #about h2 {
     border-right: 0;
-    border-bottom: 2px solid lightgrey;
+    margin-left: 0;
   }
 }
 /* END ABOUT ME */
@@ -258,9 +262,16 @@ header{
     margin-right: 0;
   }
 
+  #qualifications div {
+    padding: 0;
+    padding-bottom: 20px;
+    border: 0;
+  }
+
   #qualifications h2 {
     border-right: 0;
     border-bottom: 2px solid lightgrey;
+    margin-left: 0;
   }
 }
 
@@ -279,7 +290,7 @@ header{
 .portfolio-item {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  max-width: 100%;
   padding: 20px;
   border-bottom: 5px solid lightgrey;
 }
@@ -305,17 +316,92 @@ header{
     margin-left: 0;
     margin-right: 0;
   }
+
+  .icon-container {
+    flex-direction: row;
+  }
+
   .portfolio-item {
     flex-direction: column;
     align-content: center;
   }
 
   .portfolio-item img {
-
-  }
+    margin: auto;
+  } 
 }
 
 /* END PORTFOLIO */
+
+/* SIDEBAR ICONS */
+.icon-container {
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fa-react {
+  color: lightblue;
+  background-color: black;
+}
+
+.fa-js-square {
+  color: yellow;
+  background-color: black;
+  text-align: center;
+}
+
+.fa-html5 {
+  color: orange;
+  background-color: black;
+  text-align: center;
+}
+
+.fa-css3-alt {
+  color: lightblue;
+  background-color: black;
+  text-align: center;
+}
+/* END SIDEBAR ICONS */
+
+/* EDUCATION */
+#education {
+  display: flex;
+  flex-direction: row;
+  min-height: 25vh;
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#education h2 {
+  padding: 20px;
+  background-color: rgb(34, 86, 121);
+  color: white;
+  margin-left: 20px;
+}
+
+#education p {
+  padding: 20px;
+}
+
+#education ul {
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 900px) {
+  #education {
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #education h2 {
+    border-right: 0;
+    margin-left: 0;
+  }
+}
+/* END EDUCATION */
 
 /* CONTACT */
 /* END CONTACT */
@@ -334,8 +420,8 @@ footer {
   color: white;
 }
 
-/* ICONS */
-.icon-container {
+/* FOOTER ICONS */
+.footer-icon-container {
   display: flex;
   justify-content: center;
 }
